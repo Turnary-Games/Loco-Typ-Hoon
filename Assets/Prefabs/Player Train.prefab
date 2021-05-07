@@ -199,6 +199,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2909157666636665405}
+  - component: {fileID: 8985115855962386384}
+  - component: {fileID: 8985115855962386385}
   m_Layer: 0
   m_Name: Player Train
   m_TagString: Untagged
@@ -221,6 +223,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8985115855962386384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904285852505988443}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!114 &8985115855962386385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904285852505988443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f19b2f13d453f698f2a77f39e38bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 8985115855962386384}
+  maxSpeedForward: 8
+  maxTurnDegrees: 1.2
+  inputForward: 0
+  inputTurn: 0
 --- !u!1 &3448854925344600391
 GameObject:
   m_ObjectHideFlags: 0
