@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody body;
+    public Rigidbody locomotive;
+    public Rigidbody[] carts;
 
     [Header("Input settings")]
     [Range(0, 100)]
@@ -18,12 +19,12 @@ public class PlayerController : MonoBehaviour
 
     void Reset()
     {
-        body = GetComponentInChildren<Rigidbody>();
+        locomotive = GetComponentInChildren<Rigidbody>();
     }
 
     void OnEnable()
     {
-        if (!body)
+        if (!locomotive)
         {
             Debug.LogWarning("Rigidbody must be assigned.", this);
             enabled = false;
@@ -38,7 +39,16 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        var rotation = Quaternion.Euler(0, transform.eulerAngles.y + inputTurn * inputForward * maxTurnDegrees, 0);
+        ApplyForwardVelocity(locomotive, inputTurn * inputForward * maxTurnDegrees);
+        foreach (var car in carts)
+        {
+            ApplyForwardVelocity(car);
+        }
+    }
+
+    void ApplyForwardVelocity(Rigidbody body, float additionalYAngle = 0f)
+    {
+        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + additionalYAngle, 0);
         body.velocity = rotation * Vector3.forward * inputForward * maxSpeedForward;
         body.rotation = rotation;
     }
