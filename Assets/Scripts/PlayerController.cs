@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        var rotation = Quaternion.Euler(0, transform.eulerAngles.y + inputTurn * maxTurnDegrees, 0);
+        var rotation = Quaternion.Euler(0, transform.eulerAngles.y + inputTurn * inputForward * maxTurnDegrees, 0);
         body.velocity = rotation * Vector3.forward * inputForward * maxSpeedForward;
         body.rotation = rotation;
     }
