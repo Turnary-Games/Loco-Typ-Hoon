@@ -1,0 +1,16 @@
+# Unity files
+Library/
+Temp/
+Build/
+Builds/
+UserSettings/
+Logs/
+
+# Visual Studio
+obj/
+bin/
+/*.csproj
+/*.sln
+
+# Visual Studio Code
+.vscode/
