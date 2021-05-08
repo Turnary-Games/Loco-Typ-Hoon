@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: fromTransform
       value: 
       objectReference: {fileID: 3934569009026941504}
+    - target: {fileID: 2190110123707646967, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: relativeToCamera
+      value: 
+      objectReference: {fileID: 4655350945180125504}
     - target: {fileID: 2409204696402728881, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Name
       value: Cart health
@@ -893,5 +897,10 @@ PrefabInstance:
 --- !u!4 &3406075985223258573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8061426886496761342, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
+  m_PrefabInstance: {fileID: 4655350946137941043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &4655350945180125504 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 963194227, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
   m_PrefabInstance: {fileID: 4655350946137941043}
   m_PrefabAsset: {fileID: 0}

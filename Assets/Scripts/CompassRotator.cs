@@ -5,6 +5,7 @@ public class CompassRotator : MonoBehaviour
     public RectTransform rect;
     public Transform fromTransform;
     public Transform toTransform;
+    public Camera relativeToCamera;
 
     [Range(0, 360)]
     public float angleOffset = 90;
@@ -12,6 +13,7 @@ public class CompassRotator : MonoBehaviour
     public void Reset()
     {
         rect = GetComponent<RectTransform>();
+        relativeToCamera = Camera.main;
     }
 
     public void OnEnable()
@@ -39,6 +41,12 @@ public class CompassRotator : MonoBehaviour
         var toVec = Vec2XZ(toTransform.position);
 
         var zAngle = Vector2.SignedAngle(Vector2.up, fromVec - toVec) + angleOffset;
+
+        if (relativeToCamera)
+        {
+            zAngle += relativeToCamera.transform.eulerAngles.y;
+        }
+
         var angle = rect.localEulerAngles;
         angle.z = zAngle;
         rect.localEulerAngles = angle;
