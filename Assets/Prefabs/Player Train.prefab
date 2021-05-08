@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6746843877010052525, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 4655350945180125504}
     - target: {fileID: 7200798125409278775, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Name
       value: Engine cart health

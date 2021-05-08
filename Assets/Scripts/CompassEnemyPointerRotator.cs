@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CompassRotator : MonoBehaviour
+public class CompassEnemyPointerRotator : MonoBehaviour
 {
     public RectTransform rect;
     public Transform fromTransform;
