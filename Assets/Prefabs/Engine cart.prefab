@@ -142,7 +142,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &1455521013845139025
 MonoBehaviour:
@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 50
+  skipSendMessageWhenNonPositiveDamage: 1
 --- !u!114 &1878059675874040263
 MonoBehaviour:
   m_ObjectHideFlags: 0
