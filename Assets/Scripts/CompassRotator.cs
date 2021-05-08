@@ -8,7 +8,7 @@ public class CompassRotator : MonoBehaviour
     public Camera relativeToCamera;
 
     [Range(0, 360)]
-    public float angleOffset = 90;
+    public float angleOffset = 0;
 
     public void Reset()
     {
@@ -40,7 +40,7 @@ public class CompassRotator : MonoBehaviour
         var fromVec = Vec2XZ(fromTransform.position);
         var toVec = Vec2XZ(toTransform.position);
 
-        var zAngle = Vector2.SignedAngle(Vector2.up, fromVec - toVec) + angleOffset;
+        var zAngle = Vector2.SignedAngle(Vector2.up, toVec - fromVec) + angleOffset;
 
         if (relativeToCamera)
         {
