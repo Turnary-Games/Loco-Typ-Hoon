@@ -16,5 +16,6 @@ public class FollowTransform : MonoBehaviour
     public void LateUpdate()
     {
         transform.position = target.position;
+        transform.rotation = target.rotation;
     }
 }
