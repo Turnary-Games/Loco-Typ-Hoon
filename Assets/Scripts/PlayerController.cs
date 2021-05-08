@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
 {
@@ -23,6 +24,10 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
     public float steeringAngleChangeSpeed = 0.5f;
     [Range(0, 1)]
     public float speedMultiplierWhenDamaged = 0;
+    public bool resetToGear0WhenDamaged = true;
+
+    [Header("UI elements")]
+    public Slider speedSlider;
 
     [Header("Current input")]
     public float currentSpeed = 0;
@@ -43,6 +48,18 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
     public void OnDamaged(PlayerCartHealth.DamagedEvent data)
     {
         currentSpeed *= speedMultiplierWhenDamaged;
+        if (resetToGear0WhenDamaged)
+        {
+            inputSpeedGear = 0;
+            if (speedSlider)
+            {
+                speedSlider.value = 0;
+            }
+            else
+            {
+                Debug.LogWarning("No speed slider UI element was set when resetting the player speed.", this);
+            }
+        }
     }
 
     public void OnDrawGizmosSelected()
