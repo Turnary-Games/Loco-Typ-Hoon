@@ -673,7 +673,8 @@ MonoBehaviour:
   rect: {fileID: 8794937897488952429}
   fromTransform: {fileID: 0}
   toTransform: {fileID: 0}
-  angleOffset: 180
+  relativeToCamera: {fileID: 0}
+  angleOffset: 0
 --- !u!1 &4143868814877201181
 GameObject:
   m_ObjectHideFlags: 0
