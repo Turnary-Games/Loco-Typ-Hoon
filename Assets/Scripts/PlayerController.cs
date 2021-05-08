@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
     [Range(0, 50)]
     public float[] speedGears = { 0, 3, 10 };
     [FormerlySerializedAs("directionGears")]
-    public float[] steeringAngleGears = { -0.75f, -0.5f, -0.25f, 0.0f, 0.25f, 0.5f, 0.75f };
+    public float[] steeringAngleGears = { -1.0f, -0.75f, -0.5f, -0.25f, 0.0f, 0.25f, 0.5f, 0.75f, 1.0f };
     public float acceleration = 1;
     public float deacceleration = 5;
     public float steeringAngleChangeSpeed = 0.5f;
@@ -31,9 +31,9 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
 
     [Header("Current input")]
     public float currentSpeed = 0;
-    public float currentSteeringAngle = 0;
+    public float currentSteeringAngle = 4;
     public int inputSpeedGear = 0;
-    public int inputSteeringAngleGear = 0;
+    public int inputSteeringAngleGear = 4;
 
     public void ShiftSpeedGear(float gear)
     {
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
         {
             currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, deacceleration * Time.deltaTime);
         }
-
+        inputSteeringAngleGear = Mathf.Clamp(inputSteeringAngleGear, 0, steeringAngleGears.Length);
         currentSteeringAngle = Mathf.MoveTowardsAngle(
             currentSteeringAngle,
             steeringAngleGears[inputSteeringAngleGear],
