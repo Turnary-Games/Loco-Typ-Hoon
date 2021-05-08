@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,15 +13,17 @@ public class PlayerController : MonoBehaviour
     public float cartLocalHingeAnchorOffset = 2f;
     public float engineLocalHingeAnchorOffset = 2f;
 
-    [Header("Input settings")]
-    [Range(0, 100)]
-    public float maxSpeedForward = 5;
+    [Header("Movement settings")]
     [Range(0, 45)]
     public float maxTurnDegrees = 15;
+    [Range(0, 50)]
+    public float[] speedGears = { 0, 3, 10 };
+    public float acceleration = 1;
+    public float deacceleration = 5;
 
     [Header("Current input")]
-    [Range(0, 1)]
-    public float inputForward = 0;
+    public float currentSpeed = 0;
+    public int inputSpeedGear = 0;
     [Range(-1, 1)]
     public float inputTurn = 0;
 
@@ -73,11 +76,27 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         }
+
+        if (speedGears.Length == 0)
+        {
+            Debug.LogWarning("Must have at least 1 speed gear.", this);
+            enabled = false;
+        }
     }
 
     public void Update()
     {
-        inputForward = Mathf.Clamp(inputForward + Input.GetAxis("Vertical") * Time.deltaTime, 0, 1);
+        inputSpeedGear = Mathf.Clamp(inputSpeedGear, 0, speedGears.Length);
+        var targetSpeed = speedGears[inputSpeedGear];
+        if (targetSpeed > currentSpeed)
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
+        }
+        else
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, deacceleration * Time.deltaTime);
+        }
+
         inputTurn = Mathf.Clamp(inputTurn + Input.GetAxis("Horizontal") * Time.deltaTime, -1, 1);
     }
 
@@ -94,8 +113,8 @@ public class PlayerController : MonoBehaviour
 
     void MoveEngine(Rigidbody body)
     {
-        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + inputTurn * inputForward * maxTurnDegrees, 0);
-        body.position += rotation * Vector3.forward * inputForward * maxSpeedForward * Time.fixedDeltaTime;
+        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + inputTurn * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * maxTurnDegrees, 0);
+        body.position += rotation * Vector3.forward * currentSpeed * Time.fixedDeltaTime;
         body.rotation = rotation;
     }
 
