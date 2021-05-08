@@ -26,7 +26,6 @@ public class DelaySpawningWhenDamaged : MonoBehaviour, PlayerCartHealth.IOnDamag
 
     public void OnDamaged(PlayerCartHealth.DamagedEvent data)
     {
-        Debug.Log("Wao " + enabled);
         if (!enabled)
         {
             return;
