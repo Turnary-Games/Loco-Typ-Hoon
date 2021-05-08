@@ -1,5 +1,3 @@
-using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -18,16 +16,27 @@ public class PlayerController : MonoBehaviour
     public float maxTurnDegrees = 15;
     [Range(0, 50)]
     public float[] speedGears = { 0, 3, 10 };
-    public float[] directionGears = { -0.75f, -0.5f, -0.25f, 0.0f, 0.25f, 0.5f, 0.75f };
+    [FormerlySerializedAs("directionGears")]
+    public float[] steeringAngleGears = { -0.75f, -0.5f, -0.25f, 0.0f, 0.25f, 0.5f, 0.75f };
     public float acceleration = 1;
     public float deacceleration = 5;
+    public float steeringAngleChangeSpeed = 0.5f;
 
     [Header("Current input")]
     public float currentSpeed = 0;
+    public float currentSteeringAngle = 0;
     public int inputSpeedGear = 0;
-    public int inputDirectionGear = 0;
-    [Range(-1, 1)]
-    public float inputTurn = 0;
+    public int inputSteeringAngleGear = 0;
+
+    public void ShiftSpeedGear(float gear)
+    {
+        inputSpeedGear = Mathf.Clamp(Mathf.RoundToInt(gear), 0, speedGears.Length);
+    }
+
+    public void ShiftDirectionGear(float gear)
+    {
+        inputSteeringAngleGear = Mathf.Clamp(Mathf.RoundToInt(gear), 0, steeringAngleGears.Length);
+    }
 
     public void OnDrawGizmosSelected()
     {
@@ -84,6 +93,12 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning("Must have at least 1 speed gear.", this);
             enabled = false;
         }
+
+        if (steeringAngleGears.Length == 0)
+        {
+            Debug.LogWarning("Must have at least 1 steering angle gear.", this);
+            enabled = false;
+        }
     }
 
     public void Update()
@@ -99,7 +114,10 @@ public class PlayerController : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, deacceleration * Time.deltaTime);
         }
 
-        inputTurn = Mathf.Clamp(inputTurn + Input.GetAxis("Horizontal") * Time.deltaTime, -1, 1);
+        currentSteeringAngle = Mathf.MoveTowardsAngle(
+            currentSteeringAngle,
+            steeringAngleGears[inputSteeringAngleGear],
+            steeringAngleChangeSpeed * Time.deltaTime);
     }
 
     public void FixedUpdate()
@@ -115,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
     void MoveEngine(Rigidbody body)
     {
-        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + inputTurn * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * maxTurnDegrees, 0);
+        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + currentSteeringAngle * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * maxTurnDegrees, 0);
         body.position += rotation * Vector3.forward * currentSpeed * Time.fixedDeltaTime;
         body.rotation = rotation;
     }
@@ -169,15 +187,5 @@ public class PlayerController : MonoBehaviour
     Vector3 AverageVector3(Vector3 a, Vector3 b)
     {
         return (a + b) * 0.5f;
-    }
-
-    public void ShiftSpeedGear(float gear)
-    {
-        inputSpeedGear = (int) gear;
-    }
-
-    public void ShiftDirectionGear(float gear)
-    {
-        inputDirectionGear = (int) gear;
     }
 }

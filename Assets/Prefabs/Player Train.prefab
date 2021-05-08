@@ -62,7 +62,7 @@ MonoBehaviour:
   - 0
   - 6
   - 12
-  directionGears:
+  steeringAngleGears:
   - -0.75
   - -0.5
   - -0.25
@@ -72,10 +72,11 @@ MonoBehaviour:
   - 0.75
   acceleration: 2
   deacceleration: 6
+  steeringAngleChangeSpeed: 0.5
   currentSpeed: 0
+  currentSteeringAngle: 0
   inputSpeedGear: 0
-  inputDirectionGear: 3
-  inputTurn: 0
+  inputSteeringAngleGear: 3
 --- !u!114 &1280277127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,9 +531,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8665204941265533706, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
---- !u!4 &129171784607757782 stripped
+--- !u!4 &3328677126351280701 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &9019086050725805275 stripped
@@ -540,9 +541,9 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5988640505997087531, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3328677126351280701 stripped
+--- !u!4 &129171784607757782 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3969408903000110931
