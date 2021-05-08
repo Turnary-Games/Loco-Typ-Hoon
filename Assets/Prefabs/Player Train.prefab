@@ -203,6 +203,7 @@ MonoBehaviour:
   acceleration: 2
   deacceleration: 6
   steeringAngleChangeSpeed: 0.5
+  speedMultiplierWhenDamaged: 0.2
   currentSpeed: 0
   currentSteeringAngle: 0
   inputSpeedGear: 0

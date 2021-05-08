@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
 {
     [FormerlySerializedAs("locomotive")]
     public Rigidbody engine;
@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public float acceleration = 1;
     public float deacceleration = 5;
     public float steeringAngleChangeSpeed = 0.5f;
+    [Range(0, 1)]
+    public float speedMultiplierWhenDamaged = 0;
 
     [Header("Current input")]
     public float currentSpeed = 0;
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
     public void ShiftDirectionGear(float gear)
     {
         inputSteeringAngleGear = Mathf.Clamp(Mathf.RoundToInt(gear), 0, steeringAngleGears.Length);
+    }
+
+    public void OnDamaged(PlayerCartHealth.DamagedEvent data)
+    {
+        currentSpeed *= speedMultiplierWhenDamaged;
     }
 
     public void OnDrawGizmosSelected()

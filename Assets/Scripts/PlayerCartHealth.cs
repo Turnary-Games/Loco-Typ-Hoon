@@ -4,14 +4,15 @@ public class PlayerCartHealth : MonoBehaviour
 {
     public int maxHealth = 50;
     public int currentHealth = 50;
+    public bool skipSendMessageWhenNonPositiveDamage = true;
 
     /// <param name="damage">Damage to deal to player. Negative numbers are ignored.</param>
     public void DealDamage(int damage)
     {
-        if (damage > 0)
+        if (damage > 0 || !skipSendMessageWhenNonPositiveDamage)
         {
             currentHealth -= damage;
-            SendMessage(nameof(IOnDamagedEvent.OnDamaged), new DamagedEvent
+            SendMessageUpwards(nameof(IOnDamagedEvent.OnDamaged), new DamagedEvent
             {
                 damage = damage,
                 currentHealth = currentHealth,
