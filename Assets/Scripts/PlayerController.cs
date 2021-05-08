@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
+public class PlayerController : MonoBehaviour, HealthScript.IOnDamagedEvent
 {
     [FormerlySerializedAs("locomotive")]
     public Rigidbody engine;

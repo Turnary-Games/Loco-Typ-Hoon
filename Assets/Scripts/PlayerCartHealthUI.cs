@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCartHealthUI : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
+public class PlayerCartHealthUI : MonoBehaviour, HealthScript.IOnDamagedEvent
 {
     public Image radialImage;
 

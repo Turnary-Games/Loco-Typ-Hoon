@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DelaySpawningWhenDamaged : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
+public class DelaySpawningWhenDamaged : MonoBehaviour, HealthScript.IOnDamagedEvent
 {
     public EnemyAttackSpawning spawning;
 
