@@ -93,9 +93,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3335866117344055909, guid: 9928fc8e023b386309a4e926ac624280, type: 3}
+  fireRay: {fileID: 6679297305733957480}
   fireFrom: {fileID: 5696730527063861248}
-  cannonAnimator: {fileID: 2941230639174660100}
+  cannonAnimator: {fileID: 3254681472811191549}
+  harpoonAnimator: {fileID: 2064279395261833547}
   projectileSpeed: 50
+  reloadTime: 10
 --- !u!114 &893472299586892936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,9 +820,19 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1041069373950621179, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
   m_PrefabInstance: {fileID: 8622911232178893904}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2941230639174660100 stripped
+--- !u!95 &3254681472811191549 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 6880345444933665876, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6521299785025812653, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+  m_PrefabInstance: {fileID: 8622911232178893904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &6679297305733957480 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 3106108900278055736, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+  m_PrefabInstance: {fileID: 8622911232178893904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2064279395261833547 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7714515769580770587, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
   m_PrefabInstance: {fileID: 8622911232178893904}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5696730527063861248 stripped
