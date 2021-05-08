@@ -607,6 +607,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6746843877010052525, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 4655350945180125504}
     - target: {fileID: 7200798125409278775, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Name
       value: Engine cart health
@@ -799,9 +803,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8665204941265533706, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
---- !u!4 &129171784607757782 stripped
+--- !u!4 &3328677126351280701 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &9019086050725805275 stripped
@@ -809,9 +813,9 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5988640505997087531, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3328677126351280701 stripped
+--- !u!4 &129171784607757782 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3969408903000110931
