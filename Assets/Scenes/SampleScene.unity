@@ -2152,6 +2152,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f19b2f13d453f698f2a77f39e38bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1830768480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5852056718628473419, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+  m_PrefabInstance: {fileID: 4200131674181641872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbe99829f2072048a149b21be2ff056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1831785527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,6 +2918,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 893472299586892936, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
+      propertyPath: spawning
+      value: 
+      objectReference: {fileID: 1830768480}
     - target: {fileID: 2904285852505988443, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
       propertyPath: m_Name
       value: Player Train
