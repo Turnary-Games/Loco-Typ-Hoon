@@ -6,7 +6,11 @@ public class PlayerShooting : MonoBehaviour
 
     public Transform fireFrom;
 
+    public Animator cannonAnimator;
+
     public float projectileSpeed = 15;
+
+    private bool right = true;
 
 
 public void Fire()
@@ -19,7 +23,7 @@ public void Fire()
         {
             Debug.LogWarning("No projectile prefab to clone when firing.", this);
         }
-        else
+        else if (!FlippingCannon())
         {
             var clone = Instantiate(projectilePrefab, fireFrom.position, fireFrom.rotation);
             var body = clone.GetComponentInChildren<Rigidbody>();
@@ -32,6 +36,28 @@ public void Fire()
                 body.velocity = fireFrom.forward * projectileSpeed;
             }
         }
+    }
+
+public void Flip()
+    {
+        if (!FlippingCannon())
+        {
+            if (right)
+            {
+                right = false;
+                cannonAnimator.Play("Base Layer.Rotate Left", 0);
+            }
+            else
+            {
+                right = true;
+                cannonAnimator.Play("Base Layer.Rotate Right", 0);
+            }
+        }
+    }
+
+bool FlippingCannon()
+    {
+        return cannonAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
     }
 
 }
