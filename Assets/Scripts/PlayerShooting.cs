@@ -8,7 +8,7 @@ public class PlayerShooting : MonoBehaviour
 
     public float projectileSpeed = 15;
 
-    void Update()
+    public void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {

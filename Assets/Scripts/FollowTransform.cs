@@ -4,7 +4,7 @@ public class FollowTransform : MonoBehaviour
 {
     public Transform target;
 
-    void OnEnable()
+    public void OnEnable()
     {
         if (!target)
         {
@@ -13,7 +13,7 @@ public class FollowTransform : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    public void LateUpdate()
     {
         transform.position = target.position;
     }

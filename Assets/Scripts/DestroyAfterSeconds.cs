@@ -4,7 +4,7 @@ public class DestroyAfterSeconds : MonoBehaviour
 {
     public float seconds = 5f;
 
-    void Start()
+    public void Start()
     {
         Destroy(gameObject, seconds);
     }

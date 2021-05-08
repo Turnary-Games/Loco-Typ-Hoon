@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3604468928284549386}
   - component: {fileID: 644418736759352122}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4160562016199781259}
   - component: {fileID: 7815079784874064430}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Engine cart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
