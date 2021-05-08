@@ -18,12 +18,14 @@ public class PlayerController : MonoBehaviour
     public float maxTurnDegrees = 15;
     [Range(0, 50)]
     public float[] speedGears = { 0, 3, 10 };
+    public float[] directionGears = { -0.75f, -0.5f, -0.25f, 0.0f, 0.25f, 0.5f, 0.75f };
     public float acceleration = 1;
     public float deacceleration = 5;
 
     [Header("Current input")]
     public float currentSpeed = 0;
     public int inputSpeedGear = 0;
+    public int inputDirectionGear = 0;
     [Range(-1, 1)]
     public float inputTurn = 0;
 
@@ -167,5 +169,15 @@ public class PlayerController : MonoBehaviour
     Vector3 AverageVector3(Vector3 a, Vector3 b)
     {
         return (a + b) * 0.5f;
+    }
+
+    public void ShiftSpeedGear(float gear)
+    {
+        inputSpeedGear = (int) gear;
+    }
+
+    public void ShiftDirectionGear(float gear)
+    {
+        inputDirectionGear = (int) gear;
     }
 }
