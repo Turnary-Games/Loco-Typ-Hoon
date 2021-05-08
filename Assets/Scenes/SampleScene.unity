@@ -390,6 +390,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1670116710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4200131674744116214, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+  m_PrefabInstance: {fileID: 4200131674181641872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4200131674181641872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,6 +523,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3957201494577759395, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
+      propertyPath: toTransform
+      value: 
+      objectReference: {fileID: 1670116710}
     - target: {fileID: 4259917480997971910, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
