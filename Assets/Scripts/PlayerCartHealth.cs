@@ -11,7 +11,10 @@ public class PlayerCartHealth : MonoBehaviour
     {
         if (damage > 0 || !skipSendMessageWhenNonPositiveDamage)
         {
-            currentHealth -= damage;
+            if (damage > 0)
+            {
+                currentHealth -= damage;
+            }
             SendMessageUpwards(nameof(IOnDamagedEvent.OnDamaged), new DamagedEvent
             {
                 damage = damage,
