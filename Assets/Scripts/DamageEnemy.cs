@@ -10,4 +10,14 @@ public class DamageEnemy : DamageDealer
             DealDamage(enemy, damage);
         }
     }
+
+    public void OnTriggerEnter(Collider collider)
+    {
+        var tentacle = collider.GetComponentInParent<EnemyTentacleController>();
+
+        if (tentacle)
+        {
+            tentacle.GoDownAndSelfDestroy();
+        }
+    }
 }

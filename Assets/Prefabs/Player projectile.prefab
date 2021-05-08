@@ -296,4 +296,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onCollision: 1
-  onTrigger: 0
+  onTrigger: 1

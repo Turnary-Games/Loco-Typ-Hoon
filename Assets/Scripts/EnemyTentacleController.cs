@@ -44,7 +44,7 @@ public class EnemyTentacleController : MonoBehaviour, DamageDealer.IOnDamageDeal
         GoDownAndSelfDestroy();
     }
 
-    void GoDownAndSelfDestroy()
+    public void GoDownAndSelfDestroy()
     {
         animator.SetBool(isUpAnimProp, false);
         Destroy(gameObject, destroySecondsAfterGoingDown);
