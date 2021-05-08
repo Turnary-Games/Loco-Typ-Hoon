@@ -190,16 +190,16 @@ MonoBehaviour:
   maxTurnDegrees: 1
   speedGears:
   - 0
-  - 6
-  - 12
+  - 4
+  - 8
   steeringAngleGears:
-  - -0.75
   - -0.5
-  - -0.25
+  - -0.35
+  - -0.15
   - 0
-  - 0.25
+  - 0.15
+  - 0.35
   - 0.5
-  - 0.75
   acceleration: 2
   deacceleration: 6
   steeringAngleChangeSpeed: 0.5
@@ -389,6 +389,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1408989105854773706, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408989105854773706, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408989105854773706, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1409728009316556946, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -423,6 +435,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3434652112834342233, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984202545087551250, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984202545087551250, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984202545087551250, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5052181150488326816, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
@@ -569,6 +593,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297680047048244895, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297680047048244895, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297680047048244895, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7200798125409278775, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Name
       value: Engine cart health
@@ -576,6 +612,14 @@ PrefabInstance:
     - target: {fileID: 7269420203870240944, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Name
       value: Cart health
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325606799798389236, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8325606799798389236, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8445483757826689300, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_AnchorMax.x
@@ -742,9 +786,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8665204941265533706, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
---- !u!4 &3328677126351280701 stripped
+--- !u!4 &129171784607757782 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &9019086050725805275 stripped
@@ -752,9 +796,9 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5988640505997087531, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &129171784607757782 stripped
+--- !u!4 &3328677126351280701 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3457426648750987814, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
+  m_CorrespondingSourceObject: {fileID: 460010957, guid: 2dadc829e2fe3c564ac39fc4d7d21e24, type: 3}
   m_PrefabInstance: {fileID: 3328677126001520624}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3969408903000110931
@@ -843,7 +887,7 @@ PrefabInstance:
     - target: {fileID: 524318968, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 3934569009026941504}
+      objectReference: {fileID: 879192179200684494}
     - target: {fileID: 1766194415973132721, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
       propertyPath: m_Name
       value: Camera handle
