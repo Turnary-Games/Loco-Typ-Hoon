@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4160562016199781259}
   - component: {fileID: 7815079784874064430}
   - component: {fileID: 1455521013845139025}
+  - component: {fileID: 1878059675874040263}
   m_Layer: 0
   m_Name: Engine cart
   m_TagString: Player
@@ -155,7 +156,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b6a41e3f739d02989012bb6bf7b6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 50
   currentHealth: 50
+--- !u!114 &1878059675874040263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968680204707906811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73e31cbd45b68fa0b53ebd9ea52098e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radialImage: {fileID: 0}
 --- !u!65 &7388689889337282263
 BoxCollider:
   m_ObjectHideFlags: 0

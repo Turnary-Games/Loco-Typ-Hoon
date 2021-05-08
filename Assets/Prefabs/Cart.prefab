@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7873367468504320903}
   - component: {fileID: 5050998960932430758}
   - component: {fileID: 8072070004706055363}
+  - component: {fileID: 2707121219755625502}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Player
@@ -98,7 +99,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b6a41e3f739d02989012bb6bf7b6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 50
   currentHealth: 50
+--- !u!114 &2707121219755625502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410628071967190237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73e31cbd45b68fa0b53ebd9ea52098e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radialImage: {fileID: 0}
 --- !u!65 &2686275060070296957
 BoxCollider:
   m_ObjectHideFlags: 0
