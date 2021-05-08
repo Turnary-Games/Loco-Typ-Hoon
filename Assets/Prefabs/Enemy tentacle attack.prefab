@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1391667178623890654}
-  disappearAfterRandomMin: 20
-  disappearAfterRandomMax: 40
+  disappearAfterRandomMin: 30
+  disappearAfterRandomMax: 120
   destroySecondsAfterGoingDown: 5
   delayUntilDisappearing: 0
 --- !u!1 &4222606537353922461
@@ -112,7 +112,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.35
+  m_Radius: 0.45
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -159,7 +159,7 @@ Transform:
   m_GameObject: {fileID: 8974522955466292505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.33, z: 0}
-  m_LocalScale: {x: 3.25, y: 4, z: 3.25}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 8363931622949777366}
   m_RootOrder: 1

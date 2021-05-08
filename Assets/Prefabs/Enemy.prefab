@@ -149,7 +149,7 @@ MonoBehaviour:
   radiusNearest: 27.5
   radiusBortastest: 100
   delaySecondsMin: 2
-  delaySecondsMax: 14
+  delaySecondsMax: 13
   randomAdditionalSpawnTime: 1.5
   delayMinToMaxPerNearestToBortastest:
     serializedVersion: 2
@@ -178,8 +178,8 @@ MonoBehaviour:
   delaySinceOutOfBounds: 10
   nextSpawnInSeconds: 10
   estPosSecondsAheadMin: 2
-  estPosSecondsAheadMax: 3.5
-  steeringAngleRandomOffset: 22.5
+  estPosSecondsAheadMax: 4
+  steeringAngleRandomOffset: 15
   clampSteeringAngleOffsetToMinMaxGears: 1
 --- !u!114 &6635654480891810580
 MonoBehaviour:
