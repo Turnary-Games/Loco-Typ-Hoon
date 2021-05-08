@@ -105,6 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4200131674744116214}
+  - component: {fileID: 5852056718628473419}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -129,6 +130,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5852056718628473419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200131674744116213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbe99829f2072048a149b21be2ff056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  tentaclePrefab: {fileID: 2206479542975093805, guid: c47cd8a7612ca8f9994495f7140cba61, type: 3}
+  intervalMin: 4
+  intervalMax: 6
+  estPosSecondsAheadMin: 1.5
+  estPosSecondsAheadMax: 3
+  nextSpawnInSeconds: 10
 --- !u!1 &4200131674754018696
 GameObject:
   m_ObjectHideFlags: 0

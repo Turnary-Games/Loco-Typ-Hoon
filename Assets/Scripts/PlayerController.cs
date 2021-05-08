@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
     public float engineLocalHingeAnchorOffset = 2f;
 
     [Header("Movement settings")]
-    [Range(0, 45)]
-    public float maxTurnDegrees = 15;
     [Range(0, 50)]
     public float[] speedGears = { 0, 3, 10 };
     [FormerlySerializedAs("directionGears")]
@@ -60,6 +58,30 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
                 Debug.LogWarning("No speed slider UI element was set when resetting the player speed.", this);
             }
         }
+    }
+
+    /// <summary>
+    /// The equation used here is inefficient and inaccurate. It shall only be
+    /// used as a rough estimate.
+    /// </summary>
+    public Vector3 EstimatePositionAfterSeconds(float seconds)
+    {
+        var step = seconds % 1f;
+        if (Mathf.Approximately(step, 0))
+        {
+            step = 1f;
+        }
+
+        var pos = engine.transform.position;
+        var angle = engine.transform.eulerAngles.y;
+        for (var s = 0f; s < seconds; s += step)
+        {
+            var newPos = pos + Quaternion.Euler(0, angle, 0) * Vector3.forward * currentSpeed * step;
+            pos = newPos;
+            angle += currentSteeringAngle * step;
+        }
+
+        return pos;
     }
 
     public void OnDrawGizmosSelected()
@@ -157,7 +179,7 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
 
     void MoveEngine(Rigidbody body)
     {
-        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + currentSteeringAngle * Mathf.Clamp01(Mathf.Abs(currentSpeed)) * maxTurnDegrees, 0);
+        var rotation = Quaternion.Euler(0, body.transform.eulerAngles.y + currentSteeringAngle * Time.fixedDeltaTime * Mathf.Clamp01(Mathf.Abs(currentSpeed)), 0);
         body.position += rotation * Vector3.forward * currentSpeed * Time.fixedDeltaTime;
         body.rotation = rotation;
     }
