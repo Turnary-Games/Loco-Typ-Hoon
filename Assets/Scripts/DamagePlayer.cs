@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class DamagePlayer : MonoBehaviour
+public class DamagePlayer : DamageDealer
 {
-    [Range(0, 50)]
-    public int damage = 5;
-
     public bool hasDealtDamage;
     public bool canOnlyDealDamageOnce = true;
 
@@ -35,8 +32,6 @@ public class DamagePlayer : MonoBehaviour
             return;
         }
 
-        health.DealDamage(damage);
-
-        hasDealtDamage = true;
+        DealDamage(health, damage);
     }
 }

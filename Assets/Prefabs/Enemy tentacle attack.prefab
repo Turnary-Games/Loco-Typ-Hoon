@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8363931622949777366}
   - component: {fileID: 1391667178623890654}
-  - component: {fileID: 8469511730691566355}
+  - component: {fileID: 7641893291244412414}
   m_Layer: 0
   m_Name: Enemy tentacle attack
   m_TagString: Untagged
@@ -53,7 +53,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8469511730691566355
+--- !u!114 &7641893291244412414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,10 +62,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2206479542975093805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0259549064b8778128f985b91a95fbfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 430c7f7a21f8d5a0bbb920c228dc5795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 5
+  animator: {fileID: 1391667178623890654}
+  disappearAfterRandomMin: 20
+  disappearAfterRandomMax: 40
+  destroySecondsAfterGoingDown: 5
+  delayUntilDisappearing: 0
 --- !u!1 &4222606537353922461
 GameObject:
   m_ObjectHideFlags: 0
