@@ -187,24 +187,23 @@ MonoBehaviour:
   - {fileID: 6509387711441878228}
   cartLocalHingeAnchorOffset: 2
   engineLocalHingeAnchorOffset: 2
-  maxTurnDegrees: 1
   speedGears:
   - 0
   - 4
   - 8
   steeringAngleGears:
-  - -0.6
-  - -0.45
-  - -0.3
-  - -0.15
+  - -30
+  - -22.5
+  - -15
+  - -7.5
   - 0
-  - 0.15
-  - 0.3
-  - 0.45
-  - 0.6
+  - 7.5
+  - 15
+  - 22.5
+  - 30
   acceleration: 2
   deacceleration: 6
-  steeringAngleChangeSpeed: 0.5
+  steeringAngleChangeSpeed: 25
   speedMultiplierWhenDamaged: 0.5
   resetToGear0WhenDamaged: 1
   speedSlider: {fileID: 7967689882747336180}

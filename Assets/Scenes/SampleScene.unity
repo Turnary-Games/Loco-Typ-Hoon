@@ -3019,42 +3019,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleChangeSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[0]
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[1]
-      value: -22.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[2]
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[3]
-      value: -7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[5]
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[6]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[7]
-      value: 22.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985115855962386385, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
-      propertyPath: steeringAngleGears.Array.data[8]
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 9217675347574077899, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

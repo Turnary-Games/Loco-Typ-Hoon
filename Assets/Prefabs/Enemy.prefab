@@ -177,6 +177,8 @@ MonoBehaviour:
   nextSpawnInSeconds: 10
   estPosSecondsAheadMin: 1.5
   estPosSecondsAheadMax: 3
+  steeringAngleRandomOffset: 20
+  clampSteeringAngleOffsetToMinMaxGears: 1
 --- !u!1 &4200131674754018696
 GameObject:
   m_ObjectHideFlags: 0

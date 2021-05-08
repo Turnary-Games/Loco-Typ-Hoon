@@ -21,6 +21,8 @@ public class EnemyAttackSpawning : MonoBehaviour
     [Header("Spawning location")]
     public float estPosSecondsAheadMin = 2.5f;
     public float estPosSecondsAheadMax = 5f;
+    public float steeringAngleRandomOffset = 30f;
+    public bool clampSteeringAngleOffsetToMinMaxGears = true;
 
     public void OnEnable()
     {
@@ -63,11 +65,17 @@ public class EnemyAttackSpawning : MonoBehaviour
         {
             float invLerpNearToBort = Mathf.InverseLerp(radiusNearest, radiusBortastest, distanceToPlayer);
             nextSpawnInSeconds = Mathf.Lerp(delaySecondsMin, delaySecondsMax, delayMinToMaxPerNearestToBortastest.Evaluate(invLerpNearToBort));
-
             nextSpawnInSeconds += Random.value * randomAdditionalSpawnTime;
 
+            var steeringAngle = player.currentSteeringAngle + steeringAngleRandomOffset * Random.Range(-1, 1);
+            if (clampSteeringAngleOffsetToMinMaxGears)
+            {
+                var (min, max) = player.GetMinMaxSteeringAngleGears();
+                steeringAngle = Mathf.Clamp(steeringAngle, min, max);
+            }
+
             var aheadSeconds = Random.Range(estPosSecondsAheadMin, estPosSecondsAheadMax);
-            var pos = player.EstimatePositionAfterSeconds(aheadSeconds);
+            var pos = player.EstimatePositionAfterSeconds(aheadSeconds, steeringAngle);
             Instantiate(tentaclePrefab, pos, Quaternion.Euler(0, Random.Range(0, 360), 0));
         }
         else

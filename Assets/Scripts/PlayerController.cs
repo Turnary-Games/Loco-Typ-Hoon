@@ -60,11 +60,17 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
         }
     }
 
+    /// <inheritdoc cref="EstimatePositionAfterSeconds(float, float)"/>
+    public Vector3 EstimatePositionAfterSeconds(float seconds)
+    {
+        return EstimatePositionAfterSeconds(seconds, currentSteeringAngle);
+    }
+
     /// <summary>
     /// The equation used here is inefficient and inaccurate. It shall only be
     /// used as a rough estimate.
     /// </summary>
-    public Vector3 EstimatePositionAfterSeconds(float seconds)
+    public Vector3 EstimatePositionAfterSeconds(float seconds, float steeringAngle)
     {
         var step = seconds % 1f;
         if (Mathf.Approximately(step, 0))
@@ -78,10 +84,28 @@ public class PlayerController : MonoBehaviour, PlayerCartHealth.IOnDamagedEvent
         {
             var newPos = pos + Quaternion.Euler(0, angle, 0) * Vector3.forward * currentSpeed * step;
             pos = newPos;
-            angle += currentSteeringAngle * step;
+            angle += steeringAngle * step;
         }
 
         return pos;
+    }
+
+    public (float min, float max) GetMinMaxSteeringAngleGears()
+    {
+        float min = 0;
+        float max = 0;
+        foreach (var angle in steeringAngleGears)
+        {
+            if (angle < min)
+            {
+                min = angle;
+            }
+            if (angle > max)
+            {
+                max = angle;
+            }
+        }
+        return (min, max);
     }
 
     public void OnDrawGizmosSelected()
