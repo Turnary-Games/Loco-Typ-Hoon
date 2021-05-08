@@ -593,7 +593,7 @@ RectTransform:
   m_GameObject: {fileID: 5738171959217744383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 8243233687646111415}
   m_RootOrder: 0
@@ -601,7 +601,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1354916893954390539
 CanvasRenderer:
@@ -678,7 +678,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 730, y: 0}
-  m_SizeDelta: {x: 30, y: 500}
+  m_SizeDelta: {x: 30, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5052181150488326816
 MonoBehaviour:
@@ -724,8 +724,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 3434652112834342233}
   m_HandleRect: {fileID: 8445483757826689300}
   m_Direction: 2
-  m_MinValue: -3
-  m_MaxValue: 3
+  m_MinValue: 0
+  m_MaxValue: 2
   m_WholeNumbers: 1
   m_Value: -0
   m_OnValueChanged:
