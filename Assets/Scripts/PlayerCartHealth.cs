@@ -22,13 +22,14 @@ public class PlayerCartHealth : HealthScript
         {
             healOtherFirst.ApplyHealing(heal);
         }
-        else if (healOtherAfter && currentHealth >= maxHealth)
-        {
-            healOtherAfter.ApplyHealing(heal);
-        }
         else
         {
+            var old_health = currentHealth;
             base.ApplyHealing(heal);
+            if (healOtherAfter && old_health + heal > maxHealth)
+            {
+                healOtherAfter.ApplyHealing(old_health + heal - maxHealth);
+            }
         }
     }
 }
