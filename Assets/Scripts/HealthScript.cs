@@ -7,7 +7,7 @@ public abstract class HealthScript : MonoBehaviour
     public bool skipSendMessageWhenNonPositiveDamage = true;
 
     /// <param name="damage">Damage to deal to player. Negative numbers are ignored.</param>
-    public void DealDamage(int damage)
+    public virtual void DealDamage(int damage)
     {
         if (damage > 0 || !skipSendMessageWhenNonPositiveDamage)
         {

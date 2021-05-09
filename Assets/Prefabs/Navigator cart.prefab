@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b6a41e3f739d02989012bb6bf7b6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 50
+  maxHealth: 2
+  currentHealth: 2
   skipSendMessageWhenNonPositiveDamage: 1
 --- !u!114 &1364031575825554717
 MonoBehaviour:
