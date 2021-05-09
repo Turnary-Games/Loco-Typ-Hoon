@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour, HealthScript.IOnDamagedEvent
     public int inputSpeedGear = 0;
     public int inputSteeringAngleGear = 4;
 
+        [Header("Sound")]
+        public AudioSource chuggaChugga;
+        public float chuggaChuggaPitchMax = 1.1f;
+        public float chuggaChuggaPitchMin = 0.9f;
+
     public void ShiftSpeedGear(float gear)
     {
         inputSpeedGear = Mathf.Clamp(Mathf.RoundToInt(gear), 0, speedGears.Length);
@@ -188,6 +193,23 @@ public class PlayerController : MonoBehaviour, HealthScript.IOnDamagedEvent
             currentSteeringAngle,
             steeringAngleGears[inputSteeringAngleGear],
             steeringAngleChangeSpeed * Time.deltaTime);
+        
+        if (currentSpeed == 0)
+        {
+            if (chuggaChugga.isPlaying)
+            {
+                chuggaChugga.Stop();
+            }
+        }
+        else
+        {
+            chuggaChugga.pitch = Mathf.Lerp(chuggaChuggaPitchMin, chuggaChuggaPitchMax, currentSpeed / speedGears[speedGears.Length - 1]);
+            if (!chuggaChugga.isPlaying)
+            {
+                chuggaChugga.Play();
+            }
+        }
+
     }
 
     public void FixedUpdate()
