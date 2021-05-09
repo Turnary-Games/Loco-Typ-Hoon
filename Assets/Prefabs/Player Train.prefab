@@ -139,6 +139,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2909157666636665405}
     m_Modifications:
     - target: {fileID: 1455521013845139025, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
+      propertyPath: healOtherAfter
+      value: 
+      objectReference: {fileID: 4715574611486301803}
+    - target: {fileID: 1455521013845139025, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
       propertyPath: damageOtherFirst
       value: 
       objectReference: {fileID: 4715574611486301803}
@@ -872,6 +876,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -1.96
       objectReference: {fileID: 0}
+    - target: {fileID: 3952940064966863419, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+      propertyPath: healOtherAfter
+      value: 
+      objectReference: {fileID: 3671149593245301771}
     - target: {fileID: 3952940064966863419, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
       propertyPath: healOtherFirst
       value: 
