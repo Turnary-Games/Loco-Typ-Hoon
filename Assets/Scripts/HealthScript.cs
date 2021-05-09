@@ -7,9 +7,19 @@ public abstract class HealthScript : MonoBehaviour
     public bool skipSendMessageWhenNonPositiveDamage = true;
     public bool skipSendMessageWhenNonPositiveHeal = true;
 
+    public virtual void Start()
+    {
+        // just to force inspector to have an "enabled" checkbox
+    }
+
     /// <param name="damage">Damage to deal. Negative numbers are ignored.</param>
     public virtual void DealDamage(int damage)
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         if (damage > 0 || !skipSendMessageWhenNonPositiveDamage)
         {
             var previousHealth = currentHealth;
@@ -30,6 +40,11 @@ public abstract class HealthScript : MonoBehaviour
     /// <param name="damage">Heal amount to apply. Negative numbers are ignored.</param>
     public virtual void ApplyHealing(int heal)
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         if (heal > 0 || !skipSendMessageWhenNonPositiveHeal)
         {
             var previousHealth = currentHealth;

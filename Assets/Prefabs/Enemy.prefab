@@ -30,20 +30,6 @@ MonoBehaviour:
   hasDealtDamage: 0
   canOnlyDealDamageOnce: 1
   playerTag: Player
---- !u!114 &6749609217151973844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309161235168781762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dbbd6c495528f94db1069cd08ae7dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 30
 --- !u!114 &2246906272957343594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +46,20 @@ MonoBehaviour:
   intensity: 1
   onCollision: 0
   onTrigger: 1
+--- !u!114 &6749609217151973844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309161235168781762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbd6c495528f94db1069cd08ae7dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 30
 --- !u!1 &3206433454456310746
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 3594245401302908417}
   - component: {fileID: 756151498354575382}
   - component: {fileID: 3902178172059532211}
+  - component: {fileID: 8527561409020025517}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -460,6 +461,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8527561409020025517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200131674744116213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dabc70b2eb5d8adfc94829697063b38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWin: 1
 --- !u!1 &7823979977581092229
 GameObject:
   m_ObjectHideFlags: 0
