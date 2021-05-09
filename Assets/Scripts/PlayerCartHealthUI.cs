@@ -1,11 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCartHealthUI : MonoBehaviour, HealthScript.IOnDamagedEvent
+public class PlayerCartHealthUI : MonoBehaviour, HealthScript.IOnDamagedEvent, HealthScript.IOnHealedEvent
 {
     public Image radialImage;
 
-    public void OnDamaged(PlayerCartHealth.DamagedEvent data)
+    public void OnDamaged(HealthScript.DamagedEvent data)
+    {
+        UpdateRadialImage(data.currentHealth, data.maxHealth);
+    }
+
+    public void OnHealed(HealthScript.HealedEvent data)
+    {
+        UpdateRadialImage(data.currentHealth, data.maxHealth);
+    }
+
+    void UpdateRadialImage(int currentHealth, int maxHealth)
     {
         if (!radialImage)
         {
@@ -14,6 +24,6 @@ public class PlayerCartHealthUI : MonoBehaviour, HealthScript.IOnDamagedEvent
             return;
         }
 
-        radialImage.fillAmount = data.currentHealth / (float)data.maxHealth;
+        radialImage.fillAmount = currentHealth / (float)maxHealth;
     }
 }
