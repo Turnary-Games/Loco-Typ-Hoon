@@ -12,6 +12,7 @@ public abstract class HealthScript : MonoBehaviour
     {
         if (damage > 0 || !skipSendMessageWhenNonPositiveDamage)
         {
+            var previousHealth = currentHealth;
             if (damage > 0)
             {
                 currentHealth = Mathf.Max(0, currentHealth - damage);
@@ -19,6 +20,7 @@ public abstract class HealthScript : MonoBehaviour
             SendMessageUpwards(nameof(IOnDamagedEvent.OnDamaged), new DamagedEvent
             {
                 damage = damage,
+                previousHealth = previousHealth,
                 currentHealth = currentHealth,
                 maxHealth = maxHealth,
             }, SendMessageOptions.DontRequireReceiver);
@@ -30,6 +32,7 @@ public abstract class HealthScript : MonoBehaviour
     {
         if (heal > 0 || !skipSendMessageWhenNonPositiveHeal)
         {
+            var previousHealth = currentHealth;
             if (heal > 0)
             {
                 currentHealth = Mathf.Min(maxHealth, currentHealth + heal);
@@ -37,6 +40,7 @@ public abstract class HealthScript : MonoBehaviour
             SendMessageUpwards(nameof(IOnHealedEvent.OnHealed), new HealedEvent
             {
                 heal = heal,
+                previousHealth = previousHealth,
                 currentHealth = currentHealth,
                 maxHealth = maxHealth,
             }, SendMessageOptions.DontRequireReceiver);
@@ -46,6 +50,7 @@ public abstract class HealthScript : MonoBehaviour
     public struct DamagedEvent
     {
         public int maxHealth;
+        public int previousHealth;
         public int currentHealth;
         public int damage;
     }
@@ -59,6 +64,7 @@ public abstract class HealthScript : MonoBehaviour
     public struct HealedEvent
     {
         public int maxHealth;
+        public int previousHealth;
         public int currentHealth;
         public int heal;
     }
