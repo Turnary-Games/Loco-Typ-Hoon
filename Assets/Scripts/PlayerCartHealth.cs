@@ -1,6 +1,7 @@
 public class PlayerCartHealth : HealthScript
 {
     public PlayerCartHealth damageOtherFirst;
+    public PlayerCartHealth healOtherFirst;
 
     public override void DealDamage(int damage)
     {
@@ -11,6 +12,18 @@ public class PlayerCartHealth : HealthScript
         else
         {
             base.DealDamage(damage);
+        }
+    }
+
+    public override void ApplyHealing(int heal)
+    {
+        if (healOtherFirst && healOtherFirst.currentHealth < healOtherFirst.maxHealth)
+        {
+            healOtherFirst.ApplyHealing(heal);
+        }
+        else
+        {
+            base.ApplyHealing(heal);
         }
     }
 }
