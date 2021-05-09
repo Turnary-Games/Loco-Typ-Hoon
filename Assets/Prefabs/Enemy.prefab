@@ -14,6 +14,20 @@ CapsuleCollider:
   m_Height: 9.5
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 1}
+--- !u!114 &6749609217151973844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309161235168781762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbd6c495528f94db1069cd08ae7dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 30
 --- !u!1 &4200131674744116213
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +58,7 @@ Transform:
   m_LocalPosition: {x: -186, y: 0, z: 105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1081299514645430136}
+  - {fileID: 3173407767225424713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,9 +77,9 @@ MonoBehaviour:
   player: {fileID: 0}
   tentaclePrefab: {fileID: 2206479542975093805, guid: c47cd8a7612ca8f9994495f7140cba61, type: 3}
   radiusNearest: 12.5
-  radiusBortastest: 100
-  delaySecondsMin: 2
-  delaySecondsMax: 13
+  radiusBortastest: 150
+  delaySecondsMin: 1
+  delaySecondsMax: 12
   randomAdditionalSpawnTime: 1.5
   delayMinToMaxPerNearestToBortastest:
     serializedVersion: 2
@@ -93,8 +107,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   delaySinceOutOfBounds: 10
   nextSpawnInSeconds: 10
-  estPosSecondsAheadMin: 2
-  estPosSecondsAheadMax: 4
+  estPosSecondsAheadMin: 2.15
+  estPosSecondsAheadMax: 3
   steeringAngleRandomOffset: 15
   clampSteeringAngleOffsetToMinMaxGears: 1
 --- !u!114 &6635654480891810580
@@ -112,6 +126,7 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 50
   skipSendMessageWhenNonPositiveDamage: 1
+  skipSendMessageWhenNonPositiveHeal: 1
 --- !u!114 &3594245401302908417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,12 +141,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationSeconds: 2
   intensity: 1
+--- !u!1 &7823979977581092229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3173407767225424713}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3173407767225424713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823979977581092229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1081299514645430136}
+  m_Father: {fileID: 4200131674744116214}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &615644394003060883
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4200131674744116214}
+    m_TransformParent: {fileID: 3173407767225424713}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ca524f8b3e8afbd41bfbf9981f9c8a54, type: 3}
       propertyPath: m_RootOrder
@@ -143,11 +189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca524f8b3e8afbd41bfbf9981f9c8a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca524f8b3e8afbd41bfbf9981f9c8a54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.05
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca524f8b3e8afbd41bfbf9981f9c8a54, type: 3}
       propertyPath: m_LocalRotation.w
