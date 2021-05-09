@@ -5,20 +5,12 @@ using UnityEngine;
 public class RotateContinuously : MonoBehaviour
 {
     public bool rotateX = false;
-    
     public bool rotateY = false;
-
     public bool rotateZ = false;
-
     public float rotateSpeed = 1.0f;
+    public Space relativeTo = Space.Self;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         var rotation = new Vector3(0.0f, 0.0f, 0.0f);
         if (rotateX)
@@ -26,16 +18,16 @@ public class RotateContinuously : MonoBehaviour
             rotation.x = rotateSpeed * Time.deltaTime;
         }
 
-         if (rotateY)
+        if (rotateY)
         {
             rotation.y = rotateSpeed * Time.deltaTime;
         }
 
-         if (rotateZ)
+        if (rotateZ)
         {
             rotation.z = rotateSpeed * Time.deltaTime;
         }
 
-        transform.Rotate (rotation);
+        transform.Rotate(rotation, relativeTo);
     }
 }
