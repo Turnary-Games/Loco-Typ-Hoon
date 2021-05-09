@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 4997470606683619384}
   - component: {fileID: 6573118584870692960}
   - component: {fileID: 6081242580250477573}
-  - component: {fileID: 1364031575825554717}
   - component: {fileID: 8426449904053805824}
   m_Layer: 6
   m_Name: Navigator cart
@@ -79,20 +78,10 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 2
   skipSendMessageWhenNonPositiveDamage: 1
+  skipSendMessageWhenNonPositiveHeal: 1
   damageOtherFirst: {fileID: 0}
---- !u!114 &1364031575825554717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4586090055235609110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73e31cbd45b68fa0b53ebd9ea52098e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radialImage: {fileID: 0}
+  healOtherFirst: {fileID: 0}
+  healOtherAfter: {fileID: 0}
 --- !u!114 &8426449904053805824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  disableWhenDied: 1
+  enableWhenResurrected: 1
 --- !u!1001 &3596042319224486793
 PrefabInstance:
   m_ObjectHideFlags: 0
