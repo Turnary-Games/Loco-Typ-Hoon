@@ -77,9 +77,9 @@ MonoBehaviour:
   player: {fileID: 0}
   tentaclePrefab: {fileID: 2206479542975093805, guid: c47cd8a7612ca8f9994495f7140cba61, type: 3}
   radiusNearest: 12.5
-  radiusBortastest: 100
-  delaySecondsMin: 2
-  delaySecondsMax: 13
+  radiusBortastest: 150
+  delaySecondsMin: 1
+  delaySecondsMax: 12
   randomAdditionalSpawnTime: 1.5
   delayMinToMaxPerNearestToBortastest:
     serializedVersion: 2
@@ -107,8 +107,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   delaySinceOutOfBounds: 10
   nextSpawnInSeconds: 10
-  estPosSecondsAheadMin: 2
-  estPosSecondsAheadMax: 4
+  estPosSecondsAheadMin: 2.15
+  estPosSecondsAheadMax: 3
   steeringAngleRandomOffset: 15
   clampSteeringAngleOffsetToMinMaxGears: 1
 --- !u!114 &6635654480891810580
