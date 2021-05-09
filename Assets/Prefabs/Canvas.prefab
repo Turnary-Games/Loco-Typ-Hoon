@@ -2112,7 +2112,7 @@ GameObject:
   - component: {fileID: 1138245187631094894}
   - component: {fileID: 101964918112927319}
   - component: {fileID: 5974405019352318057}
-  - component: {fileID: 5328608924491830394}
+  - component: {fileID: 5881807923303053949}
   m_Layer: 5
   m_Name: PointerHealth
   m_TagString: Untagged
@@ -2177,23 +2177,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5328608924491830394
+--- !u!114 &5881807923303053949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7915078956725981901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99aa8ceb8e5d7de34bdca2c2cbb48550, type: 3}
+  m_Script: {fileID: 11500000, guid: 9070811e7154e73bf8dc4ef455e85c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rect: {fileID: 1138245187631094894}
   fromTransform: {fileID: 0}
-  toTransform: {fileID: 0}
   relativeToCamera: {fileID: 0}
+  pickupTag: Health pickup
+  filterOutDisabledPickups: 1
+  disabledWhenNoneFound: {fileID: 5974405019352318057}
   angleOffset: 0
+  pickups: []
 --- !u!1 &8688578945165847297
 GameObject:
   m_ObjectHideFlags: 0

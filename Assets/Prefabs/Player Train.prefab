@@ -416,6 +416,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5881807923303053949, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: fromTransform
+      value: 
+      objectReference: {fileID: 3934569009026941504}
+    - target: {fileID: 5881807923303053949, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: relativeToCamera
+      value: 
+      objectReference: {fileID: 4655350945180125504}
     - target: {fileID: 5953399088619054008, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -540,6 +548,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8239077728949002900, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: fromTransform
+      value: 
+      objectReference: {fileID: 3934569009026941504}
+    - target: {fileID: 8239077728949002900, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
+      propertyPath: relativeToCamera
+      value: 
+      objectReference: {fileID: 4655350945180125504}
     - target: {fileID: 8325606799798389236, guid: 14a37b6ba711a0c49952370fb85d02ee, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
