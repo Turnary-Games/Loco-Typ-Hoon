@@ -5,6 +5,8 @@ public class ShakeCameraWhenDamaged : MonoBehaviour, HealthScript.IOnDamagedEven
     public float durationSeconds = 1f;
     public float intensity = 1f;
 
+    public AudioSource[] playSounds = new AudioSource[0];
+
     public void OnDamaged(HealthScript.DamagedEvent data)
     {
         var cam = Camera.main;
@@ -21,5 +23,10 @@ public class ShakeCameraWhenDamaged : MonoBehaviour, HealthScript.IOnDamagedEven
         }
 
         camShake.StartShaking(durationSeconds, intensity);
+
+        foreach (var audioSource in playSounds)
+        {
+            audioSource.Play();
+        }
     }
 }

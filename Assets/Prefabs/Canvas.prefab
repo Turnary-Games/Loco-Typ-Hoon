@@ -606,7 +606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ragnar\xF6k f\xF6r dig\n\ndu dog"
+  m_Text: "Ragnar\xF6k for you\n\nyou died"
 --- !u!1 &1273226972763560320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'tjoho it died
+  m_Text: 'Tjoho it died
 
 
     lok-i has prevailed once more'

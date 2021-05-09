@@ -10,6 +10,7 @@ public class DisableAfterContact : MonoBehaviour
     public GameObject[] setActive = new GameObject[0];
     public Behaviour[] setEnabled = new Behaviour[0];
     public Collider[] colliders = new Collider[0];
+    public AudioSource[] playSounds = new AudioSource[0];
 
     [Header("These fields are set by script")]
     public float secondsUntilReenabling = 0f;
@@ -24,6 +25,10 @@ public class DisableAfterContact : MonoBehaviour
     {
         if (onCollision)
         {
+            foreach (var audioSource in playSounds)
+            {
+                audioSource.Play();
+            }
             SetEnabledState(false);
         }
     }
@@ -32,6 +37,10 @@ public class DisableAfterContact : MonoBehaviour
     {
         if (onTrigger)
         {
+            foreach (var audioSource in playSounds)
+            {
+                audioSource.Play();
+            }
             SetEnabledState(false);
         }
     }
