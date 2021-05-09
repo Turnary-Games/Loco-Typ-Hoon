@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4565760977723556651, guid: 614fb8a6770c0dd4bb0309f2f846c3f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbbf48ef0bbe8b84d8cc11820a19a824, type: 2}
     - target: {fileID: 919132149155446097, guid: 614fb8a6770c0dd4bb0309f2f846c3f6, type: 3}
       propertyPath: m_Name
       value: jormunfenrir_Hand
@@ -219,6 +223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -88.037
       objectReference: {fileID: 0}
+    - target: {fileID: 8344918196004750966, guid: 614fb8a6770c0dd4bb0309f2f846c3f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbbf48ef0bbe8b84d8cc11820a19a824, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 614fb8a6770c0dd4bb0309f2f846c3f6, type: 3}
 --- !u!4 &2840638722166245993 stripped
