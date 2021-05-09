@@ -66,6 +66,11 @@ public class PlayerShooting : MonoBehaviour
 
     public void Flip()
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         if (!IsFlippingCannon())
         {
             if (right)
