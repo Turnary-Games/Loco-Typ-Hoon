@@ -152,6 +152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Navigatin_Wagon
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0836e3b236a507488d2a32a4deabc32, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0836e3b236a507488d2a32a4deabc32, type: 3}
 --- !u!1 &3465027234490280902 stripped

@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locomotive
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a28c62b3773cb146b3cbda1bd66fa0d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a28c62b3773cb146b3cbda1bd66fa0d, type: 3}
 --- !u!1 &5835733655309169051 stripped

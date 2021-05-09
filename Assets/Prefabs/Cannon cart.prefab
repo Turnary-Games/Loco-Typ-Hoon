@@ -346,6 +346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7677412598589053536, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -4923555024201106358, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -362,6 +366,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -4425469782917252247, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4013939272993959632, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -3448298454275561468, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -369,6 +381,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
       propertyPath: m_Name
       value: Canon_Wagon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853070579179789623, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8909bddf824673142a9e7dc620858cfd, type: 3}
