@@ -13,7 +13,7 @@ public abstract class HealthScript : MonoBehaviour
         {
             if (damage > 0)
             {
-                currentHealth -= damage;
+                currentHealth = Mathf.Max(0, currentHealth - damage);
             }
             SendMessageUpwards(nameof(IOnDamagedEvent.OnDamaged), new DamagedEvent
             {
