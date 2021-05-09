@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3335866117344055909, guid: 9928fc8e023b386309a4e926ac624280, type: 3}
+  fireAudioSource: {fileID: 5157070548409978849}
   fireRay: {fileID: 6679297305733957480}
   fireFrom: {fileID: 5696730527063861248}
   cannonAnimator: {fileID: 4072853345828193709}
@@ -134,6 +135,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationSeconds: 0.5
   intensity: 0.5
+--- !u!81 &6694526554646530052
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6348361832185449858}
+  m_Enabled: 1
 --- !u!1001 &1091890598863825355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,7 +159,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4715574611486301803}
     - target: {fileID: 1609139791176599570, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
+      propertyPath: DopplerLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609139791176599570, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609139791176599570, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1878059675874040263, guid: 1c00790abbff19f18a33bb3f8353540d, type: 3}
@@ -713,6 +730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
+--- !u!1 &6348361832185449858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1766194415973132721, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
+  m_PrefabInstance: {fileID: 4655350946137941043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3406075985223258573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8061426886496761342, guid: af252755e07a4b2a29280182f8ef3939, type: 3}
@@ -911,19 +933,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b6a41e3f739d02989012bb6bf7b6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5157070548409978849 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3475411409710660529, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+  m_PrefabInstance: {fileID: 8622911232178893904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &4072853345828193709 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5705799724324778493, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
   m_PrefabInstance: {fileID: 8622911232178893904}
   m_PrefabAsset: {fileID: 0}
---- !u!120 &6679297305733957480 stripped
-LineRenderer:
-  m_CorrespondingSourceObject: {fileID: 3106108900278055736, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
-  m_PrefabInstance: {fileID: 8622911232178893904}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &495585948586122909 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8163355825576422093, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+  m_PrefabInstance: {fileID: 8622911232178893904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &6679297305733957480 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 3106108900278055736, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
   m_PrefabInstance: {fileID: 8622911232178893904}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5696730527063861248 stripped

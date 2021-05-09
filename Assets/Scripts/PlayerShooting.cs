@@ -4,6 +4,8 @@ public class PlayerShooting : MonoBehaviour
 {
     public GameObject projectilePrefab;
 
+    public AudioSource fireAudioSource;
+
     public LineRenderer fireRay;
 
     public Transform fireFrom;
@@ -53,6 +55,7 @@ public class PlayerShooting : MonoBehaviour
             var clone = Instantiate(projectilePrefab, fireFrom.position, fireFrom.rotation);
             var body = clone.GetComponentInChildren<Rigidbody>();
             harpoonAnimator.Play("Base Layer.Shoot", 0, 0.0f);
+            fireAudioSource.Play();
             if (!body)
             {
                 Debug.LogWarning("Projectile was spawned, but could not set its velocity because didnt find its Rigidbody.", this);
