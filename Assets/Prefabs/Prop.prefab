@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb699fe9034b8914fb9f4744dd3e67f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 1
   playerTag: Player
   propAnimator: {fileID: 7763591553480653234}
 --- !u!136 &4012460886419075683
