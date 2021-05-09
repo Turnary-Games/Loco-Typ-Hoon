@@ -849,6 +849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon cart
       objectReference: {fileID: 0}
+    - target: {fileID: 1697085732759620951, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1280277127}
     - target: {fileID: 1760363930345059976, guid: 92c956d92dd5c6947b613d6d89edcee6, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -1.96

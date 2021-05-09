@@ -18,16 +18,28 @@ public class PlayerShooting : MonoBehaviour
 
     private bool right = true;
 
-public void Update()
+    public void Update()
     {
-        if (!FlippingCannon() && !Shooting())
-            fireRay.enabled = true;
-        else
-            fireRay.enabled = false;
+        UpdateFireRayEnabled();
     }
 
-public void Fire()
+    public void OnEnable()
     {
+        UpdateFireRayEnabled();
+    }
+
+    public void OnDisable()
+    {
+        UpdateFireRayEnabled();
+    }
+
+    public void Fire()
+    {
+        if (!enabled)
+        {
+            return;
+        }
+
         if (!fireFrom)
         {
             Debug.LogWarning("No transform to fire from.", this);
@@ -36,7 +48,7 @@ public void Fire()
         {
             Debug.LogWarning("No projectile prefab to clone when firing.", this);
         }
-        else if (!FlippingCannon() && !Shooting())
+        else if (!IsFlippingCannon() && !IsShooting())
         {
             var clone = Instantiate(projectilePrefab, fireFrom.position, fireFrom.rotation);
             var body = clone.GetComponentInChildren<Rigidbody>();
@@ -52,9 +64,9 @@ public void Fire()
         }
     }
 
-public void Flip()
+    public void Flip()
     {
-        if (!FlippingCannon())
+        if (!IsFlippingCannon())
         {
             if (right)
             {
@@ -69,14 +81,18 @@ public void Flip()
         }
     }
 
-bool FlippingCannon()
+    void UpdateFireRayEnabled()
+    {
+        fireRay.enabled = enabled && !IsFlippingCannon() && !IsShooting();
+    }
+
+    bool IsFlippingCannon()
     {
         return cannonAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
     }
 
-bool Shooting()
+    bool IsShooting()
     {
         return harpoonAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
     }
-
 }
