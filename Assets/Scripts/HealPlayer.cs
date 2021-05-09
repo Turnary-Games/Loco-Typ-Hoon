@@ -5,8 +5,18 @@ public class HealPlayer : MonoBehaviour
     [Range(0, 50)]
     public int heal = 5;
 
+    public void Start()
+    {
+        // Having this method forces the inspector to show "enabled" checkmark
+    }
+
     public void OnTriggerEnter(Collider collider)
     {
+        if (!enabled)
+        {
+            return;
+        }
+
         var body = collider.attachedRigidbody;
         if (!body)
         {
