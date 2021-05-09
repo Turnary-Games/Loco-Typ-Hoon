@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -437,6 +437,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3404478892098788308, guid: 5fbce636ebb947f4480c1d1f9505eaa4, type: 3}
   m_PrefabInstance: {fileID: 178638692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &200632630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3934569009026941504, guid: 3681e35bf149ba0a8bfa4eb6021c58ef, type: 3}
+  m_PrefabInstance: {fileID: 8985115855962386382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &228190987
 GameObject:
@@ -6377,6 +6382,38 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1331876459}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 200632630}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: minSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: nextMoveInSeconds
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: minDistanceEachMove
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: moveIntervalRandomMax
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: moveIntervalRandomMin
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099597365457863706, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
+      propertyPath: closestDistanceToPlayer
+      value: 12.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d54404af8129c6e9e7f2efed94d326, type: 3}
 --- !u!1001 &8985115855962386382
