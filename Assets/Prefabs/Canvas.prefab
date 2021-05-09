@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 4971873809239088229}
   - component: {fileID: 3305522462666860627}
   - component: {fileID: 2392641781786464241}
+  - component: {fileID: 3996378862895463635}
   m_Layer: 5
   m_Name: Flip
   m_TagString: Untagged
@@ -376,7 +377,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 50}
+  m_SizeDelta: {x: 250, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4971873809239088229
 CanvasRenderer:
@@ -406,9 +407,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: efa570db14e9d1e46a0b896f9eb97583, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -459,7 +460,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3305522462666860627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3996378862895463635}
+        m_TargetAssemblyTypeName: SwapImageFromPlayerShooting, Assembly-CSharp
+        m_MethodName: RefreshFlippedFromPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3996378862895463635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332486902490116986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ef1c64f915f53de8ee4189757ff3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2392641781786464241}
+  player: {fileID: 0}
+  spriteA: {fileID: 21300000, guid: 008f1d047f164594b8d64a799096133d, type: 3}
+  spriteB: {fileID: 21300000, guid: efa570db14e9d1e46a0b896f9eb97583, type: 3}
 --- !u!1 &1455419333839443852
 GameObject:
   m_ObjectHideFlags: 0
