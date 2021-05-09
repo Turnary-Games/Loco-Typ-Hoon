@@ -4,20 +4,26 @@ public class DamageEnemy : DamageDealer
 {
     public void OnCollisionEnter(Collision collision)
     {
-        var enemy = collision.gameObject.GetComponentInParent<EnemyHealth>();
-        if (enemy)
-        {
-            DealDamage(enemy, damage);
-        }
+        DealDamageToGameObject(collision.gameObject);
     }
 
     public void OnTriggerEnter(Collider collider)
     {
-        var tentacle = collider.GetComponentInParent<EnemyTentacleController>();
+        DealDamageToGameObject(collider.gameObject);
+    }
 
+    void DealDamageToGameObject(GameObject obj)
+    {
+        var tentacle = obj.GetComponentInParent<EnemyTentacleController>();
         if (tentacle)
         {
             tentacle.GoDownAndSelfDestroy();
+        }
+
+        var enemy = obj.GetComponentInParent<EnemyHealth>();
+        if (enemy)
+        {
+            DealDamage(enemy, damage);
         }
     }
 }
