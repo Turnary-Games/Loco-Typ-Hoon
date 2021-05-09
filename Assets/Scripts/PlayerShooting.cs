@@ -18,7 +18,7 @@ public class PlayerShooting : MonoBehaviour
 
     public float reloadTime = 10.0f;
 
-    private bool right = true;
+    public bool cannonIsFlippedToTheLeft;
 
     public void Update()
     {
@@ -76,15 +76,17 @@ public class PlayerShooting : MonoBehaviour
 
         if (!IsFlippingCannon())
         {
-            if (right)
+            if (cannonIsFlippedToTheLeft)
             {
-                right = false;
+                cannonIsFlippedToTheLeft = false;
                 cannonAnimator.Play("Base Layer.Rotate Left", 0);
+                Debug.Log("Flip to the left");
             }
             else
             {
-                right = true;
+                cannonIsFlippedToTheLeft = true;
                 cannonAnimator.Play("Base Layer.Rotate Right", 0);
+                Debug.Log("Flip to the right");
             }
         }
     }

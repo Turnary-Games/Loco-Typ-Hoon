@@ -13,9 +13,9 @@ public class CameraShake : MonoBehaviour
 
     public void StartShaking(float duration, float intensity)
     {
-        currentShakeRemainingSeconds = duration;
-        currentShakeDurationSeconds = duration;
-        currentShakeIntensity = intensity;
+        currentShakeRemainingSeconds = Mathf.Max(currentShakeRemainingSeconds, duration);
+        currentShakeDurationSeconds = Mathf.Max(currentShakeDurationSeconds, duration);
+        currentShakeIntensity = Mathf.Max(currentShakeIntensity, intensity);
     }
 
     public void Update()
